@@ -1,5 +1,7 @@
 # Qin ToDo
 
+aaa
+
 ## Getting Started
 
 First, run the development server:
@@ -12,7 +14,7 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## 
+##
 
 - React (Next.js)
 - TypeScript
@@ -33,9 +35,8 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 `develop`
 
 - ステージング環境
-- mainとdevelopはなるべく同じ状態にする。
+- main と develop はなるべく同じ状態にする。
 
 `feature/[issue番号/issue名]`
 
-- 開発の際は基本的にdevelopを最新にしてからfeatureブランチに分岐し、PRを作成後developにマージする。
-
+- 開発の際は基本的に develop を最新にしてから feature ブランチに分岐し、PR を作成後 develop にマージする。
