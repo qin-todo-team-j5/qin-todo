@@ -1,0 +1,17 @@
+name: Check code for eslint
+on:
+  pull_request:
+    branches:
+      - main
+jobs:
+  test:
+    name: Check code for eslint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Install packages
+        run: yarn
+      - name: Prettier
+        run: yarn format
+      - name: ESlint
+        run: yarn lint

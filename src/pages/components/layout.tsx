@@ -1,9 +1,10 @@
-import { ReactNode } from "react";
-import { Header } from "./header";
+import { ReactNode } from 'react'
+
+import { Header } from './header'
 
 type Props = {
-  children?: ReactNode;
-};
+  children?: ReactNode
+}
 
 const Layout = ({ children }: Props) => {
   return (
@@ -11,7 +12,7 @@ const Layout = ({ children }: Props) => {
       <Header />
       <main>{children}</main>
     </div>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout

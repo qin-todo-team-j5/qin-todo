@@ -1,10 +1,10 @@
-import React from "react";
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image'
+import Link from 'next/link'
+import React from 'react'
 
 export const Header = () => {
   return (
-    <nav className="max-w-5xl mx-auto flex justify-between items-center p-5">
+    <nav className="flex justify-between items-center p-5 mx-auto max-w-5xl">
       <Link href="/">
         <a>
           <Image src="/logo.png" alt="Qin Todo" width={112} height={24} />
@@ -16,5 +16,5 @@ export const Header = () => {
         </a>
       </Link>
     </nav>
-  );
-};
+  )
+}
