@@ -19,6 +19,7 @@
     ]
   },
   "dependencies": {
+    "@supabase/supabase-js": "^1.30.4",
     "@types/tailwindcss": "^3.0.8",
     "autoprefixer": "^10.4.2",
     "next": "12.1.0",
