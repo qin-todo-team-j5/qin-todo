@@ -1,12 +1,12 @@
 import { ReactNode } from 'react'
 
-import { Header } from './header'
+import { Header } from './Header'
 
 type Props = {
   children?: ReactNode
 }
 
-const Layout = ({ children }: Props) => {
+export const Layout = ({ children }: Props) => {
   return (
     <div>
       <Header />
@@ -14,5 +14,3 @@ const Layout = ({ children }: Props) => {
     </div>
   )
 }
-
-export default Layout
