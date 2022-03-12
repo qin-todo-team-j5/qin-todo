@@ -19,6 +19,9 @@ module.exports = {
         today: defaultColors.rose[500],
         tomorrow: defaultColors.orange[400],
         next: defaultColors.amber[400],
+        gray: {
+          md: '#C2C6D2',
+        },
       },
     },
   },
