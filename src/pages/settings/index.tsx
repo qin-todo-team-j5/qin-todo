@@ -1,9 +1,7 @@
+import { Settings as SettingsPage } from 'src/features/settings'
+
 const Settings = () => {
-  return (
-    <div>
-      <h1>Settings</h1>
-    </div>
-  )
+  return <SettingsPage />
 }
 
 export default Settings
