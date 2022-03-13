@@ -1,18 +1,31 @@
 import clsx from 'clsx'
 import React from 'react'
 
-type HeadingProps = React.HTMLAttributes<HTMLHeadingElement> & {
+type HeadingProps = {
+  as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'label'
   children: string
 }
 
-export const Heading = ({ children, ...props }: HeadingProps) => {
+type HTMLOriginalElement = {
+  h1: HTMLHeadingElement
+  h2: HTMLHeadingElement
+  h3: HTMLHeadingElement
+  h4: HTMLHeadingElement
+  h5: HTMLHeadingElement
+  h6: HTMLHeadingElement
+  label: HTMLLabelElement
+}
+
+export const Heading = ({ as = 'h3', children, ...props }: HeadingProps) => {
+  type Element = HTMLOriginalElement[typeof as]
+
   // eslint-disable-next-line react/prop-types
-  const { className, ...restProps } = props
+  const { className, ...restProps } = props as Element
   const customClass = clsx('text-sm font-bold text-gray-md', className)
 
-  return (
-    <h3 className={customClass} {...restProps}>
-      {children}
-    </h3>
+  return React.createElement(
+    as,
+    { className: customClass, ...restProps },
+    children
   )
 }
