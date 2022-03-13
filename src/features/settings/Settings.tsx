@@ -2,6 +2,8 @@ import { ChevronRightIcon, ExternalLinkIcon } from '@heroicons/react/outline'
 import Link from 'next/link'
 import React from 'react'
 
+import { Heading } from './Heading'
+
 const SettingsList = ({
   children,
   href,
@@ -41,7 +43,7 @@ export const Settings = () => {
   return (
     <div className="px-9 mx-auto max-w-2xl">
       <ul className="mt-6 mb-9">
-        <h3 className="text-sm font-bold text-gray-md">設定</h3>
+        <Heading>設定</Heading>
         <SettingsList href="/settings/profile">プロフィール</SettingsList>
         <SettingsList href="/settings/account">アカウント</SettingsList>
         <SettingsList href="/settings/theme" theme={theme}>
@@ -49,7 +51,7 @@ export const Settings = () => {
         </SettingsList>
       </ul>
       <ul className="mt-6 mb-9">
-        <h3 className="text-sm font-bold text-gray-md">サポート</h3>
+        <Heading>サポート</Heading>
         <SettingsList href="/">プライバシーポリシー</SettingsList>
         <SettingsList href="/">利用規約</SettingsList>
         <SettingsList href="/" external>
