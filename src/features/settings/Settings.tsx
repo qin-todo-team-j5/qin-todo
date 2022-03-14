@@ -1,6 +1,9 @@
 import { ChevronRightIcon, ExternalLinkIcon } from '@heroicons/react/outline'
+import { useTheme } from 'next-themes'
 import Link from 'next/link'
 import React from 'react'
+
+import { themeLists } from 'src/utils/theme'
 
 import { Heading } from './Heading'
 
@@ -39,14 +42,19 @@ const SettingsList = ({
 }
 
 export const Settings = () => {
-  const theme = 'OSの設定に合わせる'
+  const { theme } = useTheme()
+
+  const themeName = React.useMemo(() => {
+    return themeLists.find(list => list.theme === theme)?.name
+  }, [theme])
+
   return (
     <div className="px-9 mx-auto max-w-2xl">
       <ul className="mt-6 mb-9">
         <Heading>設定</Heading>
         <SettingsList href="/settings/profile">プロフィール</SettingsList>
         <SettingsList href="/settings/account">アカウント</SettingsList>
-        <SettingsList href="/settings/theme" theme={theme}>
+        <SettingsList href="/settings/theme" theme={themeName}>
           テーマ
         </SettingsList>
       </ul>
